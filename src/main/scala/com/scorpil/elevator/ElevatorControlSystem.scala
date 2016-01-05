@@ -34,7 +34,7 @@ class ElevatorControlSystem(elevatorCount: Int) {
     elevators = elevators.map(e => if (e.id == id) e.goTo(targetFloors) else e)
   }
 
-  /** Perform on step of simulation */
+  /** Perform one step of simulation */
   def step {
     elevators = elevators.map(e => e.step)
   }
